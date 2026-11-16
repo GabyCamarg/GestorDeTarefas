@@ -1,0 +1,46 @@
+# RELATÓRIO TÉCNICO
+**PROJETO: GESTOR DE TAREFAS**  
+**DISCIPLINA: PROGRAMAÇÃO E SISTEMAS COMPUTACIONAIS II**  
+**INTEGRANTE: GABRYELE CAMARGO OLIVEIRA**
+
+## 1. INTRODUÇÃO
+
+O projeto Gestor de Tarefas foi desenvolvido em C++ com o objetivo de aplicar conceitos de estruturas de dados, algoritmos de busca e ordenação, ponteiros, recursividade e gerenciamento dinâmico de memória.
+
+O sistema permite cadastrar, listar, remover e concluir tarefas, além de organizar o atendimento por fila, desfazer conclusões e consultar tarefas por meio de algoritmos de busca.
+
+## 2. ESTRUTURAS DE DADOS UTILIZADAS
+
+**Lista encadeada:** utilizada para armazenar as tarefas dinamicamente. Cada nó possui identificador, título, prioridade, status e um ponteiro para o próximo elemento. A inserção ocorre no final da lista e a remoção é realizada por identificador.
+
+**Pilha:** implementada para armazenar o histórico de conclusões de tarefas. Segue o princípio LIFO (Last In, First Out), permitindo desfazer a última conclusão registrada.
+
+**Fila:** utilizada para organizar o atendimento das tarefas, seguindo o princípio FIFO (First In, First Out). Assim, a primeira tarefa adicionada é a primeira a ser atendida.
+
+**Árvore Binária de Busca:** utilizada para organizar os identificadores das tarefas. A inserção e a busca são realizadas por comparação entre os valores dos nós. A travessia em ordem utiliza recursividade e apresenta os identificadores em ordem crescente.
+
+## 3. ALGORITMOS DE ORDENAÇÃO E BUSCA
+
+O algoritmo de ordenação implementado foi o Insertion Sort, utilizado para ordenar as tarefas conforme a prioridade. Sua complexidade é O(n²) no pior caso e O(n) no melhor caso, quando os dados já estão ordenados.
+
+Também foram implementados dois algoritmos de busca:
+
+**Busca sequencial:** percorre os elementos da lista até encontrar o título procurado. Sua complexidade é O(n).
+
+**Busca binária:** realiza a pesquisa em um vetor ordenado por identificador, reduzindo o intervalo de busca a cada comparação. Sua complexidade é O(log n) para a etapa de busca. A preparação do vetor e sua ordenação possuem custo adicional.
+
+O sistema contabiliza operações e mede o tempo de execução das buscas para permitir a observação de seus comportamentos.
+
+## 4. GERENCIAMENTO DE MEMÓRIA
+
+O projeto utiliza alocação dinâmica de memória por meio do operador `new`, responsável pela criação dos nós das estruturas de dados.
+
+O operador `delete` é utilizado para liberar os nós removidos e os elementos restantes durante o encerramento do programa. A liberação da memória é realizada por funções específicas para cada estrutura.
+
+Essa estratégia permite controlar a utilização da memória durante a execução e aplicar os conceitos de ponteiros e alocação dinâmica estudados na disciplina.
+
+## 5. CONSIDERAÇÕES FINAIS
+
+O desenvolvimento do Gestor de Tarefas permitiu aplicar diferentes estruturas de dados em um único sistema, demonstrando suas funcionalidades e diferenças de comportamento.
+
+O projeto também possibilitou trabalhar com algoritmos de ordenação e busca, recursividade, ponteiros e gerenciamento de memória dinâmica, integrando os conteúdos estudados na disciplina de Programação e Sistemas Computacionais II.
